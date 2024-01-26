@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery</title> 
+    
+</head>
+
+<body>
+    <div class="full-img" id="fullImgBox">
+        <img src="" id="fullImg">
+        <span onclick="CloseFullImg()">X</span>
+    </div>
+    <img src="src/images/BigImgR.jpg" usemap="#image_map"/> 
+    <map name="image_map"> 
+        <area alt="letter1" title="letter1" href="#" onclick="OpenFullImg('src/images/letters/letter1.png')" coords="407,490 343,1059 769,1103 828,539 " shape="polygon">
+        <area alt="letter2" title="letter2" href="#" onclick="OpenFullImg('src/images/letters/letter2.png')" coords="835,523 780,1082 1187,1088 1237,552 " shape="polygon">
+        <area alt="letter3" title="letter3" href="#" onclick="OpenFullImg('src/images/letters/letter3.png')" coords="1243,536,1634,1098" shape="rect">
+        <area alt="letter4" title="letter4" href="#" onclick="OpenFullImg('src/images/letters/letter4.png')" coords="1965,539,2364,1103" shape="rect">
+        <area alt="letter5" title="letter5" href="#" onclick="OpenFullImg('src/images/letters/letter5.png')" coords="2695,570 2716,1124 3121,1117 3090,562 " shape="polygon">
+        <area alt="letter6" title="letter6" href="#" onclick="OpenFullImg('src/images/letters/letter6.png')" coords="3118,599,3510,1159" shape="rect">
+        <area alt="letter7" title="letter7" href="#" onclick="OpenFullImg('src/images/letters/letter7.png')" coords="3536,578,3933,1138" shape="rect">
+        <area alt="letter8" title="letter8" href="#" onclick="OpenFullImg('src/images/letters/letter8.png')" coords="37,1090 0,1676 433,1687 460,1101 " shape="polygon">
+        <area alt="letter9" title="letter9" href="#" onclick="OpenFullImg('src/images/letters/letter9.png')" coords="473,1088 444,1663 856,1676 880,1101 " shape="polygon">
+        <area alt="letter10" title="letter10" href="#" onclick="OpenFullImg('src/images/letters/letter10.png')" coords="883,1098,1295,1668" shape="rect">
+        <area alt="letter11" title="letter11" href="#" onclick="OpenFullImg('src/images/letters/letter11.png')" coords="1308,1122,1710,1697" shape="rect">
+        <area alt="letter12" title="letter12" href="#" onclick="OpenFullImg('src/images/letters/letter12.png')" coords="1744,1138,2133,1713" shape="rect">
+        <area alt="letter13" title="letter13" href="#" onclick="OpenFullImg('src/images/letters/letter13.png')" coords="2146,1145,2540,1718" shape="rect">
+        <area alt="letter14" title="letter14" href="#" onclick="OpenFullImg('src/images/letters/letter14.png')" coords="2551,1148,2963,1716" shape="rect">
+        <area alt="letter15" title="letter15" href="#" onclick="OpenFullImg('src/images/letters/letter15.png')" coords="2977,1153,3379,1726" shape="rect">
+        <area alt="letter16" title="letter16" href="#" onclick="OpenFullImg('src/images/letters/letter16.png')" coords="47,1716 50,2315 473,2296 473,1700 " shape="polygon">
+        <area alt="letter17" title="letter17" href="#" onclick="OpenFullImg('src/images/letters/letter17.png')" coords="497,1734,917,2336" shape="rect">
+        <area alt="letter18" title="letter18" href="#" onclick="OpenFullImg('src/images/letters/letter18.png')" coords="980,1747 957,2339 1383,2351 1395,1752 " shape="polygon">
+        <area alt="letter19" title="letter19" href="#" onclick="OpenFullImg('src/images/letters/letter19.png')" coords="1490,1765,1905,2367" shape="rect">
+        <area alt="letter20" title="letter20" href="#" onclick="OpenFullImg('src/images/letters/letter20.png')" coords="2052,1734 2036,2322 2446,2336 2459,1744 " shape="polygon">
+        <area alt="letter21" title="letter21" href="#" onclick="OpenFullImg('src/images/letters/letter21.png')" coords="2470,1730 2877,2323" shape="rect">
+    </map>
+    <script src="mageMapResizer.min.js"></script>
+    <script>
+      imageMapResize();
+    </script>
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function OpenFullImg(imagePath){
+            fullImg.src = imagePath;
+            fullImgBox.style.display = "flex";
+        }
+        function CloseFullImg(){
+            fullImgBox.style.display = "none";
+        }
+
+    </script>  
+</body> 
+</html>
